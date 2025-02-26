@@ -1,0 +1,275 @@
+:root{
+    --color-background: #03426E;  /* Dark Blue */
+    --color-text: #FFFAF0;         /* Off-white */
+    --color-text-light: #B0BEC5;   /* Light Gray for secondary text */
+    --color-button: #4A90E2;       /* Light Blue for buttons */
+    --color-hover: #00BFFF;        /* Cyan for hover effects */
+    --color-accent: #FF6F61;  
+    --font-main: "Vollkorn", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--color-background);
+    background-color: var(--color-text);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.hero, .about, .portfolio, .contact {
+    min-height: 100vh; /* Her bölüm için minimum yükseklik */
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+    transition: color 0.3s ease;
+}
+.nav-menu a:hover {
+    color: var(--color-accent);
+}
+
+.logo {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-link{
+    color: var(--color-text-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    
+}
+
+.navbar {
+    background-color: var(--color-background);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero {
+    background-image: url("images/1.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+h1{
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    
+}
+.hero_content{
+    z-index: 1;
+    color: var(--color-text-light);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.cta-button{
+    text-decoration: none;
+    color: var(--color-text-light);
+    background-color: var(--color-background);
+    padding:1rem ;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+
+}
+.hero_content a:hover{
+    background-color: var(--color-accent);
+
+}
+.about {
+    display: flex;
+    height: auto;
+    padding: 4rem 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+.about-content {
+    display: flex;
+    align-items: center; /* Dikey hizalamayı ortalar */
+    gap: 2rem; /* Fotoğraf ve açıklama arasına boşluk ekler */
+    flex-wrap: wrap; /* Küçük ekranlarda elemanları alt alta sıralar */
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.about-image {
+    width: 250px; /* Fotoğraf genişliği */
+    height: auto; /* Oranını korur */
+    border-radius: 30px; /* Kenarları yuvarlar */
+    object-fit: cover; /* Fotoğrafı düzgün kırpar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Hafif gölge ekler */
+}
+
+.description {
+    flex: 1; /* Description kısmı boş alanı kaplar */
+    color: var(--color-background); /* Yazı rengini ayarlar */
+}
+
+.description p {
+    margin-bottom: 1.5rem; /* Paragraflar arasında boşluk */
+    line-height: 1.8; /* Satır arası mesafe */
+    font-size: 1.2rem; /* Yazı boyutu */
+}
+
+.description h2 {
+    font-size: 2.5rem; /* Başlık yazı boyutu */
+    margin-bottom: 1rem;
+}
+
+.portfolio {
+    background-color: var(--color-background);
+    padding: 4rem 2rem;
+    height: auto;
+    color: var(--color-text);
+    flex-wrap: wrap;
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--color-text);
+    color: var(--color-background);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.portfolio-item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--color-accent);
+
+}
+
+.portfolio-item ul{
+    list-style: none;
+    padding: 0;
+}
+
+.portfolio-item li {
+    margin-bottom: 1rem;
+}
+
+.portfolio-item a {
+    text-decoration: none;
+    color: var(--color-background);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.portfolio-item a:hover {
+    color: var(--color-accent);
+}
+
+.contact {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0.5%;
+    background-color: var(--color-text);
+    color: #03426E;
+    flex-wrap: wrap;
+}
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.contact h2 {
+    font-size: 3rem;
+    text-align: left;
+    color: var(--color-accent);
+}
+.contact p{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+.contact-info li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    list-style: none;
+}
+
+.contact-info a{
+    color: #03426E;
+    text-decoration: none;
+}
+
+@media (max-width: 768px){
+    .hero{
+        background-size: cover;
+        background-position: center center;
+    }
+    .about-content {
+        flex-direction: column; /* Stack the image and text vertically */
+        align-items: center; /* Center the content */
+    }
+
+    /* Adjust portfolio grid for smaller screens */
+    .portfolio-grid {
+        flex-direction: column; /* Stack items vertically on small screens */
+        gap: 3rem; /* Reduce space between items */
+    }
+
+    /* Contact section adjustments */
+    .contact {
+        padding: 2rem 1rem; /* Add more padding to make the contact section more readable */
+        height: auto; /* Allow flexible height */
+    }
+}
