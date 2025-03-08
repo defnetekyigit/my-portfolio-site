@@ -60,6 +60,7 @@ body {
     width: 100%;
     z-index: 1000;
     padding: 1rem 0;
+    align-items: center;
 }
 
 .navbar-container{
@@ -252,9 +253,16 @@ h1{
 }
 
 @media (max-width: 768px){
+    .nav-menu {
+        justify-content: space-between;
+        display: flex; 
+        align-items: center; 
+        box-sizing: border-box;
+    }
     .hero{
         background-size: cover;
-        background-position: center center;
+        background-position: center;
+        height: 70vh;
     }
     .about-content {
         flex-direction: column; /* Stack the image and text vertically */
